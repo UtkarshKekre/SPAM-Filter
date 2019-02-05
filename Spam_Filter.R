@@ -1,8 +1,8 @@
 ### Load the data into R
 data1 <- read.csv(file.choose(),header = FALSE, sep = ";")
-
+## Choose file SPAM_Data.csv
 names <- read.csv(file.choose(),header = F, sep = ";")
-
+## Choose file names.csv
 names(data1) <- sapply((1:nrow(names)),function(i)toString(names[i,1]))
 
 data1$y <- as.factor(data1$y)
